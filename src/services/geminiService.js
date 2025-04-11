@@ -1,5 +1,5 @@
-const GEMINI_API_KEY = 'AIzaSyBkQcoIb4W3XjSGG9a5Uw55t2bZLMSUpDo';
-const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent';
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent';
 
 export const sendMessageToGemini = async (message) => {
   try {

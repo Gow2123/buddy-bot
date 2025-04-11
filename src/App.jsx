@@ -50,8 +50,16 @@ function App() {
           <h1>Chat Buddy</h1>
         </div>
         <div className="chat-messages">
+          {messages.length === 0 && (
+            <div className="welcome-message">
+              <p>👋 Hi! I'm your AI chat buddy. How can I help you today?</p>
+            </div>
+          )}
           {messages.map((message, index) => (
-            <div key={index} className={`message ${message.sender} ${message.isError ? 'error' : ''}`}>
+            <div 
+              key={index} 
+              className={`message ${message.sender} ${message.isError ? 'error' : ''}`}
+            >
               {message.text}
             </div>
           ))}
